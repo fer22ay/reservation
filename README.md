@@ -8,6 +8,7 @@ Aplicacion web en Java con Spring Boot y base de datos PostgreSQL.
 * Se aprovecho de las caracteristicas de Lombok para los getters y setters. ✔️
 * Versión de Java 11 ✔️
 * Versión de PostgreSQL 10.12 ✔️
+* Tambien se publicara en docker hub. 
 
 # Open source 💚
 * Eres bienvenido para aportar tu código o ayudar a mejorar lo que ya se tiene codificado. 

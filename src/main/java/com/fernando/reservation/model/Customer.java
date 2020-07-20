@@ -1,12 +1,44 @@
 package com.fernando.reservation.model;
 
+import java.io.Serializable;
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import lombok.Data;
+
 /**
  * @author Fernando Ambrosio
  * @since 10 of july 2020
  *
  */
-public class Customer {
+@Data
+@Entity
+@Table(name = "customer", schema = "reservation")
+public class Customer implements Serializable {
 
+	private static final long serialVersionUID = 8724307691593812378L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idCustomer;
+	private String lastCustomer;
+	private String nameCustomer;
+	private String identificationCustomer;
+	private String addressCustomer;
+	private String phoneCustomer;
+	private String emailCustomer;
 	
-	
+	@OneToMany(mappedBy = "customer")
+	private Set<Reservation> reservations;
+
+	public Customer() {
+
+	}
+
 }

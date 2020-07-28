@@ -1,8 +1,9 @@
 package com.fernando.reservation.model;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,13 +30,15 @@ public class Customer implements Serializable {
 	private Long idCustomer;
 	private String lastCustomer;
 	private String nameCustomer;
+	@Column(unique = true)
 	private String identificationCustomer;
 	private String addressCustomer;
 	private String phoneCustomer;
+	@Column(unique = true, nullable = false)
 	private String emailCustomer;
-	
+
 	@OneToMany(mappedBy = "customer")
-	private Set<Reservation> reservations;
+	private List<Reservation> reservations;
 
 	public Customer() {
 

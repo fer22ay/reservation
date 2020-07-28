@@ -5,9 +5,9 @@ spring:
     password: MANAGER1
     driver-class-name: org.postgresql.Driver
   jpa:
-    hibernate:
-      ddl-auto: create-drop
-    generate-ddl: true
-    show-sql: true
+    hibernate:  
+      ddl-auto: update #Change with update in producction
+    generate-ddl: true #Replace with false in producction
+    show-sql: true #Replace with false in producction
 server:
-  port: 8090
+  port: 8090 #You can configure another port

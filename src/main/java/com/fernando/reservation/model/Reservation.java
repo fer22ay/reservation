@@ -18,6 +18,8 @@ import javax.persistence.Table;
 import lombok.Data;
 
 /**
+ * Class representing the reserve table
+ * 
  * @author Fernando Ambrosio
  * @since 19 of july 2020
  *

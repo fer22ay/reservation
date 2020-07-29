@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -21,6 +23,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "customer", schema = "reservation")
+@NamedQuery(name = "Customer.findByIdentification", query = "SELECT c FROM Customer c WHERE.identificationCustomer = ?1")
 public class Customer implements Serializable {
 
 	private static final long serialVersionUID = 8724307691593812378L;
